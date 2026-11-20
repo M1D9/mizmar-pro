@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0c" />
+    <title>مزمار برو | MIZMAR PRO</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <a class="logo" href="#" data-page="dashboard" aria-label="مزمار برو - لوحة التحكم">
+                <span class="logo-mark" aria-hidden="true"><span>م</span><i></i></span>
+                <span><strong>MIZMAR <em>PRO</em></strong><small>VIDEO STUDIO</small></span>
+            </a>
+            <nav class="nav-menu" aria-label="التنقل الرئيسي">
+                <button class="nav-btn active" type="button" data-page="dashboard">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>لوحة التحكم</span>
+                </button>
+                <button class="nav-btn" type="button" data-page="upscale">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 3.5 3.5 2.5-2.5 5 5"/></svg>رفع الجودة</span>
+                </button>
+                <button class="nav-btn" type="button" data-page="motion_blur">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></svg>تمويه الحركة</span>
+                </button>
+                <button class="nav-btn" type="button" data-page="lossless">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>الرفع بدون ضغط</span>
+                </button>
+                <button class="nav-btn" type="button" data-page="convert">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h14l-3-3"/><path d="m18 7-3 3"/><path d="M20 17H6l3 3"/><path d="m6 17 3-3"/></svg>تحويل الصيغ</span>
+                </button>
+                <button class="nav-btn" type="button" data-page="queue">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".7"/><circle cx="4" cy="12" r=".7"/><circle cx="4" cy="18" r=".7"/></svg>قائمة الانتظار</span><span id="queue-count">0</span>
+                </button>
+                <button class="nav-btn" type="button" data-page="help">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.5 2.5 0 1 1 4.3 1.7c-1.2 1.2-1.9 1.4-1.9 3"/><path d="M12 17.5h.01"/></svg>شرح البرنامج</span>
+                </button>
+                <button class="nav-btn" type="button" data-page="settings">
+                    <span class="nav-label"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.2 1-1.2 2-1.5-.6a7.8 7.8 0 0 1-1.5.9l-.2 1.6h-2.4l-.3-1.6a7.8 7.8 0 0 1-1.5-.9l-1.5.6-1.2-2 1.2-1a7 7 0 0 1 0-1.8l-1.2-1 1.2-2 1.5.6a7.8 7.8 0 0 1 1.5-.9l.3-1.6h2.4l.2 1.6a7.8 7.8 0 0 1 1.5.9l1.5-.6 1.2 2-1.2 1a7 7 0 0 1 0 1.7z"/></svg>الإعدادات</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <span class="connection-dot"></span>
+                <span>استوديو معالجة الفيديو</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="page-dashboard" class="page-content active">
+                <div class="welcome-banner">
+                    <div>
+                        <span class="eyebrow">MIZMAR PRO · VIDEO STUDIO</span>
+                        <h1>كل أدوات الفيديو، في مكان واحد.</h1>
+                        <p>اختر أداة لبدء تجهيز مقاطعك بإعدادات مستقلة لكل عملية.</p>
+                    </div>
+                    <div class="welcome-emblem" aria-hidden="true">م</div>
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <h2>الأدوات</h2>
+                        <p>حدد نوع المعالجة للمتابعة</p>
+                    </div>
+                    <button class="text-btn" type="button" data-page="queue">عرض قائمة الانتظار ←</button>
+                </div>
+
+                <div class="tool-dashboard">
+                    <button class="tool-card" type="button" data-page="upscale">
+                        <span class="tool-icon">✦</span>
+                        <span class="tool-card-title">رفع الجودة</span>
+                        <span class="tool-card-description">اختر Real-ESRGAN العام أو GFPGAN المخصص للوجوه قبل التصدير.</span>
+                        <span class="card-link">فتح الأداة <span aria-hidden="true">←</span></span>
+                    </button>
+                    <button class="tool-card" type="button" data-page="motion_blur">
+                        <span class="tool-icon">〰</span>
+                        <span class="tool-card-title">تمويه الحركة</span>
+                        <span class="tool-card-description">مزج الإطارات بفلتر tmix مع تحكم في شدة التأثير.</span>
+                        <span class="card-link">فتح الأداة <span aria-hidden="true">←</span></span>
+                    </button>
+                    <button class="tool-card" type="button" data-page="lossless">
+                        <span class="tool-icon">◌</span>
+                        <span class="tool-card-title">الرفع بدون ضغط</span>
+                        <span class="tool-card-description">تطبيق معالجة TikTok Quality على ملف MP4 متوافق.</span>
+                        <span class="card-link">فتح الأداة <span aria-hidden="true">←</span></span>
+                    </button>
+                    <button class="tool-card" type="button" data-page="convert">
+                        <span class="tool-icon">⇄</span>
+                        <span class="tool-card-title">تحويل الصيغ</span>
+                        <span class="tool-card-description">تحويل الفيديو إلى MP4 أو MOV أو AVI أو MKV.</span>
+                        <span class="card-link">فتح الأداة <span aria-hidden="true">←</span></span>
+                    </button>
+                </div>
+                <div class="dashboard-note">
+                    <span class="note-icon">i</span>
+                    <p>ابدأ باختيار فيديو داخل صفحة الأداة. تُضاف كل عملية إلى قائمة الانتظار وتُنفذ بالتتابع.</p>
+                </div>
+            </section>
+
+            <section id="page-upscale" class="page-content">
+                <div class="page-heading">
+                    <span class="eyebrow">AI ENHANCEMENT</span>
+                    <h1 class="page-title">رفع الجودة</h1>
+                    <p>حسّن تفاصيل الإطارات باستخدام Real-ESRGAN، ثم اختر إعدادات التصدير.</p>
+                </div>
+                <div class="tool-layout">
+                    <div class="tool-main-card">
+                        <div class="card-heading"><span class="step-number">01</span><div><h2>اختر الفيديو</h2><p>MP4 · MOV · MKV · AVI</p></div></div>
+                        <div class="drop-zone" data-drop-zone="upscale" role="button" tabindex="0" aria-label="اختيار فيديو لرفع الجودة">
+                            <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 32.5a8.5 8.5 0 0 1 1-17 12 12 0 0 1 23.2 3.2 7 7 0 0 1-.7 13.8H30"/><path d="M24 37V22m0 0-6 6m6-6 6 6"/></svg></span>
+                            <strong>اسحب الفيديو إلى هنا</strong>
+                            <span class="drop-text">أو انقر لاختيار ملف من جهازك</span>
+                            <span class="selected-file" data-selected-file="upscale">لم يتم اختيار فيديو</span>
+                            <div class="video-preview-card" data-video-preview="upscale" hidden>
+                                <div class="thumbnail-shell">
+                                    <video data-video-thumbnail="upscale" muted playsinline preload="metadata" aria-hidden="true"></video>
+                                    <div class="thumbnail-placeholder" data-thumbnail-placeholder="upscale"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="28" rx="6"/><path d="m20 18 11 6-11 6z"/><path d="M12 34h24"/></svg><span data-thumbnail-message="upscale">جاري تجهيز المعاينة</span></div>
+                                    <span class="thumbnail-format" data-thumbnail-format="upscale">VIDEO</span>
+                                </div>
+                                <div class="preview-meta"><strong data-preview-name="upscale">—</strong><span data-preview-size="upscale">جاري قراءة الحجم…</span><span class="preview-state" data-preview-state="upscale">جاري التحليل</span></div>
+                            </div>
+                        </div>
+                        <div class="video-info-bar" data-video-info-for="upscale" hidden aria-live="polite">
+                            <div class="video-info-heading"><strong>معلومات الفيديو</strong><span class="video-info-error" data-video-info-error="upscale" hidden></span></div>
+                            <dl class="video-info-grid">
+                                <div><dt>اسم الملف</dt><dd data-video-info-field="file_name">—</dd></div>
+                                <div><dt>الحجم</dt><dd data-video-info-field="file_size">—</dd></div>
+                                <div><dt>الدقة</dt><dd data-video-info-field="resolution">—</dd></div>
+                                <div><dt>معدل الإطارات</dt><dd data-video-info-field="fps">—</dd></div>
+                                <div><dt>المدة</dt><dd data-video-info-field="duration">—</dd></div>
+                                <div><dt>الكوديك</dt><dd data-video-info-field="codec">—</dd></div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="card-heading"><span class="step-number">02</span><div><h2>إعدادات رفع الجودة</h2><p>تُطبق على هذه الأداة فقط</p></div></div>
+                        <div class="setting-group">
+                            <label>دقة الإخراج</label>
+                            <div class="resolution-cards">
+                                <button class="res-card" type="button" data-resolution="4k"><strong>4K Studio</strong><span>2160 × 3840</span></button>
+                                <button class="res-card" type="button" data-resolution="2k"><strong>2K Studio</strong><span>1440 × 2560</span></button>
+                                <button class="res-card active" type="button" data-resolution="1080p"><strong>1080p Studio</strong><span>1080 × 1920</span></button>
+                                <button class="res-card" type="button" data-resolution="original"><strong>الأصلية</strong><span>أبعاد المصدر</span></button>
+                            </div>
+                        </div>
+                        <div class="setting-group">
+                            <label for="ai-model-select">طريقة تكبير الصورة</label>
+                            <select id="ai-model-select">
+                                <option value="general" selected>AI عام — Real-ESRGAN</option>
+                                <option value="faces">AI مخصص للوجوه — GFPGAN</option>
+                            </select>
+                            <p class="setting-hint">يتطلب خيار GFPGAN وجود الملف GFPGANv1.4.pth داخل models.</p>
+                        </div>
+                        <div class="setting-group">
+                            <label for="codec-select">كوديك الفيديو</label>
+                            <select id="codec-select">
+                                <option value="libx264">H.264 — توافق أفضل</option>
+                                <option value="libx265">H.265 — حجم أصغر</option>
+                            </select>
+                        </div>
+                        <div class="setting-group">
+                            <label for="fps-select">معدل الإطارات</label>
+                            <select id="fps-select">
+                                <option value="60">60 إطار/ثانية</option>
+                                <option value="120">120 إطار/ثانية</option>
+                                <option value="original">الأصلي</option>
+                            </select>
+                        </div>
+                        <div class="setting-group">
+                            <label class="toggle-control" for="denoise-toggle"><input id="denoise-toggle" type="checkbox" /><span>تقليل الضوضاء (hqdn3d)</span></label>
+                        </div>
+                        <button class="primary-btn start-btn" type="button" data-start-tool="upscale">بدء رفع الجودة</button>
+                        <div class="progress-container" data-progress-for="upscale" hidden><div class="progress-track"><div class="progress-fill"></div></div><div class="progress-text">0%</div></div>
+                        <p class="status-text" data-status-for="upscale" aria-live="polite">اختر فيديو للبدء.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-motion_blur" class="page-content">
+                <div class="page-heading">
+                    <span class="eyebrow">MOTION EFFECT</span>
+                    <h1 class="page-title">تمويه الحركة</h1>
+                    <p>أضف تمويه حركة عبر مزج الإطارات باستخدام فلتر tmix في FFmpeg.</p>
+                </div>
+                <div class="tool-layout">
+                    <div class="tool-main-card">
+                        <div class="card-heading"><span class="step-number">01</span><div><h2>اختر الفيديو</h2><p>MP4 · MOV · MKV · AVI</p></div></div>
+                        <div class="drop-zone" data-drop-zone="motion_blur" role="button" tabindex="0" aria-label="اختيار فيديو لتمويه الحركة">
+                            <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 32.5a8.5 8.5 0 0 1 1-17 12 12 0 0 1 23.2 3.2 7 7 0 0 1-.7 13.8H30"/><path d="M24 37V22m0 0-6 6m6-6 6 6"/></svg></span><strong>اسحب الفيديو إلى هنا</strong><span class="drop-text">أو انقر لاختيار ملف من جهازك</span>
+                            <span class="selected-file" data-selected-file="motion_blur">لم يتم اختيار فيديو</span>
+                            <div class="video-preview-card" data-video-preview="motion_blur" hidden>
+                                <div class="thumbnail-shell">
+                                    <video data-video-thumbnail="motion_blur" muted playsinline preload="metadata" aria-hidden="true"></video>
+                                    <div class="thumbnail-placeholder" data-thumbnail-placeholder="motion_blur"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="28" rx="6"/><path d="m20 18 11 6-11 6z"/><path d="M12 34h24"/></svg><span data-thumbnail-message="motion_blur">جاري تجهيز المعاينة</span></div>
+                                    <span class="thumbnail-format" data-thumbnail-format="motion_blur">VIDEO</span>
+                                </div>
+                                <div class="preview-meta"><strong data-preview-name="motion_blur">—</strong><span data-preview-size="motion_blur">جاري قراءة الحجم…</span><span class="preview-state" data-preview-state="motion_blur">جاري التحليل</span></div>
+                            </div>
+                        </div>
+                        <div class="video-info-bar" data-video-info-for="motion_blur" hidden aria-live="polite">
+                            <div class="video-info-heading"><strong>معلومات الفيديو</strong><span class="video-info-error" data-video-info-error="motion_blur" hidden></span></div>
+                            <dl class="video-info-grid">
+                                <div><dt>اسم الملف</dt><dd data-video-info-field="file_name">—</dd></div>
+                                <div><dt>الحجم</dt><dd data-video-info-field="file_size">—</dd></div>
+                                <div><dt>الدقة</dt><dd data-video-info-field="resolution">—</dd></div>
+                                <div><dt>معدل الإطارات</dt><dd data-video-info-field="fps">—</dd></div>
+                                <div><dt>المدة</dt><dd data-video-info-field="duration">—</dd></div>
+                                <div><dt>الكوديك</dt><dd data-video-info-field="codec">—</dd></div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="card-heading"><span class="step-number">02</span><div><h2>إعدادات تمويه الحركة</h2><p>تُطبق على هذه الأداة فقط</p></div></div>
+                        <div class="setting-group">
+                            <label for="blur-amount-select">كثافة التمويه <output id="blur-amount-value" for="blur-amount-select">5</output>/10</label>
+                            <input id="blur-amount-select" class="range-control" type="range" min="1" max="10" step="1" value="5" />
+                        </div>
+                        <div class="setting-group">
+                            <label for="interpolation-engine-select">محرك توليد الإطارات</label>
+                            <select id="interpolation-engine-select">
+                                <option value="rife" selected>RIFE* (FFmpeg minterpolate)</option>
+                                <option value="svpflow" disabled>SVPFlow (غير متاح في إصدار FFmpeg الحالي)</option>
+                            </select>
+                        </div>
+                        <div class="setting-group">
+                            <label for="blur-style-select">نوع التمويه</label>
+                            <select id="blur-style-select">
+                                <option value="cinematic" selected>سينمائي</option>
+                                <option value="sports">رياضي</option>
+                                <option value="fast">سريع</option>
+                            </select>
+                        </div>
+                        <div class="setting-hint">يستخدم خيار RIFE فلتر FFmpeg minterpolate للاستيفاء، وليس نموذج RIFE العصبي. يتطلب SVPFlow تثبيتاً غير متوفر حالياً.</div>
+                        <div class="setting-hint">تُحفظ الإطارات والصوت في ملف MP4 جديد.</div>
+                        <button class="primary-btn start-btn" type="button" data-start-tool="motion_blur">بدء تمويه الحركة</button>
+                        <div class="progress-container" data-progress-for="motion_blur" hidden><div class="progress-track"><div class="progress-fill"></div></div><div class="progress-text">0%</div></div>
+                        <p class="status-text" data-status-for="motion_blur" aria-live="polite">اختر فيديو للبدء.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-lossless" class="page-content">
+                <div class="page-heading">
+                    <span class="eyebrow">TIKTOK QUALITY</span>
+                    <h1 class="page-title">الرفع بدون ضغط</h1>
+                    <p>يحافظ على ترميز الفيديو؛ تختلف آلية المعالجة حسب H.264 أو H.265.</p>
+                </div>
+                <div class="tool-layout">
+                    <div class="tool-main-card">
+                        <div class="card-heading"><span class="step-number">01</span><div><h2>اختر ملف MP4</h2><p>يدعم H.264 وH.265، ويُنشأ ملف جديد دون تعديل المصدر</p></div></div>
+                        <div class="drop-zone" data-drop-zone="lossless" role="button" tabindex="0" aria-label="اختيار فيديو لمعالجة Lossless">
+                            <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 32.5a8.5 8.5 0 0 1 1-17 12 12 0 0 1 23.2 3.2 7 7 0 0 1-.7 13.8H30"/><path d="M24 37V22m0 0-6 6m6-6 6 6"/></svg></span><strong>اسحب الفيديو إلى هنا</strong><span class="drop-text">أو انقر لاختيار ملف من جهازك</span>
+                            <span class="selected-file" data-selected-file="lossless">لم يتم اختيار فيديو</span>
+                            <div class="video-preview-card" data-video-preview="lossless" hidden>
+                                <div class="thumbnail-shell">
+                                    <video data-video-thumbnail="lossless" muted playsinline preload="metadata" aria-hidden="true"></video>
+                                    <div class="thumbnail-placeholder" data-thumbnail-placeholder="lossless"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="28" rx="6"/><path d="m20 18 11 6-11 6z"/><path d="M12 34h24"/></svg><span data-thumbnail-message="lossless">جاري تجهيز المعاينة</span></div>
+                                    <span class="thumbnail-format" data-thumbnail-format="lossless">VIDEO</span>
+                                </div>
+                                <div class="preview-meta"><strong data-preview-name="lossless">—</strong><span data-preview-size="lossless">جاري قراءة الحجم…</span><span class="preview-state" data-preview-state="lossless">جاري التحليل</span></div>
+                            </div>
+                        </div>
+                        <div class="video-info-bar" data-video-info-for="lossless" hidden aria-live="polite">
+                            <div class="video-info-heading"><strong>معلومات الفيديو</strong><span class="video-info-error" data-video-info-error="lossless" hidden></span></div>
+                            <dl class="video-info-grid">
+                                <div><dt>اسم الملف</dt><dd data-video-info-field="file_name">—</dd></div>
+                                <div><dt>الحجم</dt><dd data-video-info-field="file_size">—</dd></div>
+                                <div><dt>الدقة</dt><dd data-video-info-field="resolution">—</dd></div>
+                                <div><dt>معدل الإطارات</dt><dd data-video-info-field="fps">—</dd></div>
+                                <div><dt>المدة</dt><dd data-video-info-field="duration">—</dd></div>
+                                <div><dt>الكوديك</dt><dd data-video-info-field="codec">—</dd></div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="card-heading"><span class="step-number">02</span><div><h2>إعدادات Lossless</h2><p>تُطبق على هذه الأداة فقط</p></div></div>
+                        <div class="setting-group">
+                            <label for="lossless-multiplier-select">معامل ترقيع H.264</label>
+                            <select id="lossless-multiplier-select">
+                                <option value="10">10×</option>
+                                <option value="20">20×</option>
+                                <option value="30">30×</option>
+                            </select>
+                        </div>
+                        <div id="lossless-method-note" class="warning-card" aria-live="polite"><strong>صيغة مدعومة</strong><p>H.264 يستخدم tiktok-quality. H.265 يُعاد تغليفه بنسخ المسارات مع وسم hvc1؛ لا ينطبق عليه المعامل. لا تضمن أي من الطريقتين منع TikTok من إعادة الترميز.</p></div>
+                        <button class="primary-btn start-btn" type="button" data-start-tool="lossless">تخطي الضغط</button>
+                        <div class="progress-container" data-progress-for="lossless" hidden><div class="progress-track"><div class="progress-fill"></div></div><div class="progress-text">0%</div></div>
+                        <p class="status-text" data-status-for="lossless" aria-live="polite">اختر فيديو للبدء.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-convert" class="page-content">
+                <div class="page-heading">
+                    <span class="eyebrow">FORMAT CONVERTER</span>
+                    <h1 class="page-title">تحويل الصيغ</h1>
+                    <p>حوّل الفيديو إلى صيغة تناسب احتياجك مع مستوى جودة خاص بالتحويل.</p>
+                </div>
+                <div class="tool-layout">
+                    <div class="tool-main-card">
+                        <div class="card-heading"><span class="step-number">01</span><div><h2>اختر الفيديو</h2><p>MP4 · MOV · MKV · AVI</p></div></div>
+                        <div class="drop-zone" data-drop-zone="convert" role="button" tabindex="0" aria-label="اختيار فيديو للتحويل">
+                            <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 32.5a8.5 8.5 0 0 1 1-17 12 12 0 0 1 23.2 3.2 7 7 0 0 1-.7 13.8H30"/><path d="M24 37V22m0 0-6 6m6-6 6 6"/></svg></span><strong>اسحب الفيديو إلى هنا</strong><span class="drop-text">أو انقر لاختيار ملف من جهازك</span>
+                            <span class="selected-file" data-selected-file="convert">لم يتم اختيار فيديو</span>
+                            <div class="video-preview-card" data-video-preview="convert" hidden>
+                                <div class="thumbnail-shell">
+                                    <video data-video-thumbnail="convert" muted playsinline preload="metadata" aria-hidden="true"></video>
+                                    <div class="thumbnail-placeholder" data-thumbnail-placeholder="convert"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="28" rx="6"/><path d="m20 18 11 6-11 6z"/><path d="M12 34h24"/></svg><span data-thumbnail-message="convert">جاري تجهيز المعاينة</span></div>
+                                    <span class="thumbnail-format" data-thumbnail-format="convert">VIDEO</span>
+                                </div>
+                                <div class="preview-meta"><strong data-preview-name="convert">—</strong><span data-preview-size="convert">جاري قراءة الحجم…</span><span class="preview-state" data-preview-state="convert">جاري التحليل</span></div>
+                            </div>
+                        </div>
+                        <div class="video-info-bar" data-video-info-for="convert" hidden aria-live="polite">
+                            <div class="video-info-heading"><strong>معلومات الفيديو</strong><span class="video-info-error" data-video-info-error="convert" hidden></span></div>
+                            <dl class="video-info-grid">
+                                <div><dt>اسم الملف</dt><dd data-video-info-field="file_name">—</dd></div>
+                                <div><dt>الحجم</dt><dd data-video-info-field="file_size">—</dd></div>
+                                <div><dt>الدقة</dt><dd data-video-info-field="resolution">—</dd></div>
+                                <div><dt>معدل الإطارات</dt><dd data-video-info-field="fps">—</dd></div>
+                                <div><dt>المدة</dt><dd data-video-info-field="duration">—</dd></div>
+                                <div><dt>الكوديك</dt><dd data-video-info-field="codec">—</dd></div>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="settings-panel">
+                        <div class="card-heading"><span class="step-number">02</span><div><h2>إعدادات التحويل</h2><p>تُطبق على هذه الأداة فقط</p></div></div>
+                        <div class="setting-group">
+                            <label for="convert-format-select">صيغة الإخراج</label>
+                            <select id="convert-format-select">
+                                <option value="mp4">MP4</option>
+                                <option value="mov">MOV</option>
+                                <option value="avi">AVI</option>
+                                <option value="mkv">MKV</option>
+                            </select>
+                        </div>
+                        <div class="setting-group">
+                            <label for="convert-quality-select">جودة التحويل</label>
+                            <select id="convert-quality-select">
+                                <option value="high">عالية</option>
+                                <option value="medium" selected>متوسطة</option>
+                                <option value="low">منخفضة</option>
+                            </select>
+                        </div>
+                        <button class="primary-btn start-btn" type="button" data-start-tool="convert">بدء التحويل</button>
+                        <div class="progress-container" data-progress-for="convert" hidden><div class="progress-track"><div class="progress-fill"></div></div><div class="progress-text">0%</div></div>
+                        <p class="status-text" data-status-for="convert" aria-live="polite">اختر فيديو للبدء.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="page-queue" class="page-content">
+                <div class="page-heading">
+                    <span class="eyebrow">PROCESSING QUEUE</span>
+                    <h1 class="page-title">قائمة الانتظار</h1>
+                    <p>تُنفّذ مهام الفيديو بالتتابع ويمكنك متابعة حالتها هنا.</p>
+                </div>
+                <div id="queue-list" class="queue-list"><p class="empty-state">لا توجد مهام في القائمة.</p></div>
+                <button id="clear-queue-btn" class="secondary-btn clear-queue-btn" type="button">مسح المهام المكتملة والفاشلة</button>
+            </section>
+
+            <section id="page-help" class="page-content">
+                <div class="page-heading">
+                    <span class="eyebrow">GETTING STARTED</span>
+                    <h1 class="page-title">شرح البرنامج</h1>
+                    <p>تعرف على طريقة عمل أدوات مزمار برو.</p>
+                </div>
+                <div class="help-grid">
+                    <article class="info-card"><span class="help-number">01</span><h2>اختر أداة</h2><p>لكل أداة صفحة مستقلة وإعداداتها الخاصة. لن تُشارك إعدادات الدقة أو الكوديك مع التحويل أو تمويه الحركة أو Lossless.</p></article>
+                    <article class="info-card"><span class="help-number">02</span><h2>أضف الفيديو</h2><p>اختر ملف فيديو من جهازك أو اسحبه إلى منطقة الاختيار. يُحفظ ملف المصدر كما هو وتُكتب النتائج في مجلد output.</p></article>
+                    <article class="info-card"><span class="help-number">03</span><h2>تابع المعالجة</h2><p>يُحفظ ملف config.json لكل مهمة ثم يشغل محرك Python الأداة المطلوبة. أضف مهاماً أخرى وتابعها من قائمة الانتظار.</p></article>
+                </div>
+                <div class="warning-card help-warning"><strong>عن معالجة TikTok Quality</strong><p>تُطبّق المكتبة ترقيعاً مباشراً لملفات MP4/H.264 دون إعادة ترميز المصدر. لا يضمن ذلك أن TikTok لن يعيد ترميز الملف عند رفعه.</p></div>
+            </section>
+
+            <section id="page-settings" class="page-content">
+                <div class="page-heading">
+                    <span class="eyebrow">ENGINE SETTINGS</span>
+                    <h1 class="page-title">الإعدادات</h1>
+                    <p>اختر محرك المعالجة الذي سيستخدمه التطبيق في المهام الجديدة.</p>
+                </div>
+                <div class="settings-panel cuda-settings-panel">
+                    <div class="card-heading"><span class="step-number">01</span><div><h2>تسريع كرت الشاشة</h2><p>محرك CPU المضمن يعمل افتراضياً على جميع الأجهزة.</p></div></div>
+                    <div class="setting-group">
+                        <label class="toggle-control" for="cuda-enabled-toggle">
+                            <input id="cuda-enabled-toggle" type="checkbox" disabled />
+                            <span>تفعيل تسريع كرت الشاشة (CUDA)</span>
+                        </label>
+                        <p class="setting-hint">يتطلب بطاقة NVIDIA وتعريفاً متوافقاً. محرك CUDA كبير (نحو 2.5 GiB) ويُنزّل عند الطلب إلى مجلد بيانات التطبيق. يبدأ استخدامه مع المهام التالية؛ المهام الجارية لا تتغير.</p>
+                    </div>
+                    <button id="cuda-download-button" class="primary-btn start-btn" type="button" disabled>تنزيل محرك CUDA وتفعيله</button>
+                    <div id="cuda-download-progress" class="progress-container" hidden>
+                        <div class="progress-track"><div class="progress-fill"></div></div>
+                        <div class="progress-text">0%</div>
+                    </div>
+                    <p id="cuda-engine-status" class="status-text" aria-live="polite">جاري التحقق من إعدادات محرك CUDA…</p>
+                    <div class="warning-card">
+                        <strong>التحقق قبل التشغيل</strong>
+                        <p>لا يُشغّل التطبيق الملف إلا بعد مطابقة SHA-256 المثبتة في النسخة مع المحرك كاملاً. لا تُفعّل التنزيل قبل نشر أصول الإصدار وملئ رابط البيان والبصمة في كود Rust.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

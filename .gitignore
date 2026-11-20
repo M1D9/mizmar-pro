@@ -1,0 +1,17 @@
+venv/
+venv-cpu/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+src-tauri/target/
+src-tauri/binaries/
+build/
+release-assets/
+models/
+output/
+*.exe
+*.msi
+*.pth
+config.json
+downloads/
